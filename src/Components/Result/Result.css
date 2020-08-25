@@ -1,0 +1,13 @@
+table {
+  margin-left: 20px;
+}
+
+.title {
+  text-align: right;
+}
+
+.value {
+  padding-left: 20px;
+  text-align: left;
+
+}

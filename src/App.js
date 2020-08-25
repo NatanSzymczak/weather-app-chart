@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Form from './Form';
-import Result from './Result';
+import Form from './Components/Form/Form';
+import Result from './Components/Result/Result';
 import './App.css';
+import { getWeather } from './Requests'
 
-const APIKey = `fef73af5887a58d08a6da71da975997c`;
 
 class App extends Component {
   state = {
@@ -27,9 +27,7 @@ class App extends Component {
   handleCitySubmit = e => {
     e.preventDefault();
 
-    const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=${APIKey}&units=metric`;
-    fetch(API)
-      .then(response => {
+    getWeather(this.state.value).then(response => {
         if(response.ok) return response;
         throw Error("Wystąpił problem!");
       })
