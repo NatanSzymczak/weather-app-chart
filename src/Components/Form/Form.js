@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import CurrentWeather from '../CurrentWeather/CurrentWeather'
 
-const Form = props => {
+const Form = () => {
+  const [city, setCity] = useState('');
+  const [inputValue, setInputValue] = useState('');
+
+  const current = e => {
+    e.preventDefault();
+    setCity(inputValue);
+  }
+
   return (
-    <form onSubmit={props.submit}>
+    <>
       <input
         type="text"
-        value={props.value}
-        onChange={props.change}
-        placeholder="Wpisz miasto"
+        city={city}
+        onChange={e => setInputValue(e.target.value)}
+        placeholder="City name.."
       />
-      <button>Wyszukaj miasta</button>
-    </form>
+      <button onClick={ (e) => { current(e) }} >Current Weather Data</button>
+      { city ? <CurrentWeather searchCity={city} /> : <></> }
+    </>
   )
 }
 
