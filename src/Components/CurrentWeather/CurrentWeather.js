@@ -32,11 +32,6 @@ const CurrentWeather = ({searchCity}) => {
     .catch(err => {
       console.log(err);
       setErr(true);
-
-      // this.setState( prevState => ({
-      //   err:  true,
-      //   city: prevState.value
-      // }))
     });
 
 
