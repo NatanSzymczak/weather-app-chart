@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Form from './Components/Form/Form';
 import Result from './Components/Result/Result';
 import './App.css';
-import { getWeather } from './Requests'
+import { getCurrentWeather } from './Requests'
 
 
 class App extends Component {
@@ -27,7 +27,7 @@ class App extends Component {
   handleCitySubmit = e => {
     e.preventDefault();
 
-    getWeather(this.state.value).then(response => {
+    getCurrentWeather(this.state.value).then(response => {
         if(response.ok) return response;
         throw Error("Wystąpił problem!");
       })
