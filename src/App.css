@@ -1,0 +1,7 @@
+body {
+  height: 100vh;
+  background-image: url("https://picsum.photos/1600/1050");
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+}

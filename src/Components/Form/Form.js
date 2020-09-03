@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import CurrentWeather from '../CurrentWeather/CurrentWeather'
-import FiveDeysWeather from '../FiveDeysWeather/FiveDeysWeather'
+import CurrentWeather from '../CurrentWeather/CurrentWeather';
+import FiveDeysWeather from '../FiveDeysWeather/FiveDeysWeather';
+import './Form.css';
 
 const Form = () => {
   const [city, setCity] = useState('');
@@ -12,17 +13,17 @@ const Form = () => {
   }
 
   return (
-    <>
+    <div className="cityNameForm">
       <input
         type="text"
         city={city}
         onChange={e => setInputValue(e.target.value)}
-        placeholder="City name.."
+        placeholder="Check weather:"
       />
-      <button onClick={ (e) => { current(e) }} >Current Weather Data</button>
-      { city ? <CurrentWeather searchCity={city} /> : <></> }
-      { city ? <FiveDeysWeather searchCity={city} /> : <></> }
-    </>
+      <button onClick={ (e) => { current(e) }} >check</button>
+      { city && <CurrentWeather  searchCity={city} /> }
+      { city && <FiveDeysWeather searchCity={city} /> }
+    </div>
   )
 }
 
