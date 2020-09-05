@@ -1,28 +1,25 @@
 import React, { useState } from 'react';
-import CurrentWeather from '../CurrentWeather/CurrentWeather';
-import FiveDeysWeather from '../FiveDeysWeather/FiveDeysWeather';
+import { Link, Redirect } from "react-router-dom";
 import './Form.css';
 
 const Form = () => {
-  const [city, setCity] = useState('');
   const [inputValue, setInputValue] = useState('');
+  const [enter, clickEnter] = useState(false);
 
-  const current = e => {
-    e.preventDefault();
-    setCity(inputValue);
-  }
+  const handleKeyDown = ({keyCode}) => {(keyCode === 13) && clickEnter(true)}
 
   return (
     <div className="cityNameForm">
       <input
         type="text"
-        city={city}
         onChange={e => setInputValue(e.target.value)}
         placeholder="Check weather:"
+        onKeyDown={ e => handleKeyDown(e)}
       />
-      <button onClick={ (e) => { current(e) }} >check</button>
-      { city && <CurrentWeather  searchCity={city} /> }
-      { city && <FiveDeysWeather searchCity={city} /> }
+      <Link to={`/weather/${inputValue}`}>
+        <button className="checkWeather">check</button>
+      </Link>
+      {enter && <Redirect to={`/weather/${inputValue}`} />}
     </div>
   )
 }
