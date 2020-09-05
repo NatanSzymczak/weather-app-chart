@@ -15,6 +15,7 @@ const Form = () => {
         onChange={e => setInputValue(e.target.value)}
         placeholder="Check weather:"
         onKeyDown={ e => handleKeyDown(e)}
+        spellcheck="false"
       />
       <Link to={`/weather/${inputValue}`}>
         <button className="checkWeather">check</button>

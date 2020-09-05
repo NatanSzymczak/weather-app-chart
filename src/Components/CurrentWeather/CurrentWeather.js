@@ -90,13 +90,13 @@ const CurrentWeather = () => {
             </td>
             <td className="value">{pressure} hPa</td>
           </tr>
-          <tr className="textColor">
+          <tr className="medium">
             <td className="title">
               <FontAwesomeIcon icon={faSun} /> <FontAwesomeIcon icon={faAngleDoubleUp} />
             </td>
             <td className="value">{sunriseTime}</td>
           </tr>
-          <tr className="textColor">
+          <tr className="medium">
             <td className="title">
               <FontAwesomeIcon icon={faSun} /> <FontAwesomeIcon icon={faAngleDoubleDown} />
             </td>
