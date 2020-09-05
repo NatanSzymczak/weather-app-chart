@@ -14,6 +14,7 @@
 input {
   width: 300px;
   height: 65px;
+  margin-bottom: 25px;
   border: 3px solid #818181;
   border-radius: 5px;
   font-size: 30px;
@@ -21,10 +22,9 @@ input {
   font-family: monospace;
 }
 
-button {
+.checkWeather {
   width: 120px;
   height: 50px;
-  margin-top: 25px;
   background-color: white;
   border: 3px solid #818181;
   border-radius: 5px;
@@ -35,7 +35,7 @@ button {
   transition: .7s all;
 }
 
-button:hover {
+.checkWeather:hover {
   width: 100px;
   height: 50px;
   background-color: #727272;
