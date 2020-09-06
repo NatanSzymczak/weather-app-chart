@@ -57,17 +57,17 @@ function FiveDaysTemperature () {
 
   return (
     <div className="chartInTemp">
-      <Link to={`/chart/wind/${city}`}>
+      <Link to={`/chart/wind/${city}`} >
           <div className="windChartBtnInTemp">
             <FontAwesomeIcon icon={faWind} />
           </div>
       </Link>
-      <Link to={`/chart/press/${city}`}>
+      <Link to={`/chart/press/${city}`} >
           <div className="compressChartBtnInTemp">
             <FontAwesomeIcon icon={faCompress} />
           </div>
       </Link>
-      <Link to="/" >
+      <Link to={`/weather/${city}`} >
         <div className="backChartBtnInTemp">
           <FontAwesomeIcon icon={faChevronCircleLeft} />
         </div>

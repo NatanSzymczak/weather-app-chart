@@ -67,7 +67,7 @@ function FiveDaysPressure () {
             <FontAwesomeIcon icon={faTemperatureLow} />
           </div>
       </Link>
-      <Link to="/" >
+      <Link to={`/weather/${city}`} >
         <div className="backChartBtnInPress">
           <FontAwesomeIcon icon={faChevronCircleLeft} />
         </div>

@@ -67,7 +67,7 @@ function FiveDaysWind () {
             <FontAwesomeIcon icon={faCompress} />
           </div>
       </Link>
-      <Link to="/" >
+      <Link to={`/weather/${city}`} >
         <div className="backChartBtnInWind">
           <FontAwesomeIcon icon={faChevronCircleLeft} />
         </div>
