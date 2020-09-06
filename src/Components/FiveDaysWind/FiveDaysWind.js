@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import { Line } from 'react-chartjs-2';
 import { useParams } from 'react-router';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons/";
-import './FiveDeysWeather.css';
+import { faChevronCircleLeft, faTemperatureLow, faCompress } from "@fortawesome/free-solid-svg-icons/";
+import './FiveDaysWind.css';
 
 
 
-function FiveDeysWeather () {
+function FiveDaysWind () {
   const { city } = useParams();
   const [ history, setHistory] = useState([]);
 
@@ -48,17 +48,27 @@ function FiveDeysWeather () {
     labels: history.map((elem, id) => title(elem, id) ),
     datasets: [
       {
-        label: 'Temperature',
-        data:  history.map(elem => `${elem.main.temp}` ),
-        backgroundColor: ['rgba(158, 115, 148, .7)'],
+        label: 'Wind [ m/s ]',
+        data:  history.map(elem => `${elem.wind.speed}` ),
+        backgroundColor: ['rgba(72, 117, 152, .7)'],
       },
     ],
   }
 
   return (
-    <div className="chart">
+    <div className="chartInWind">
+      <Link to={`/chart/temp/${city}`}>
+          <div className="tempChartBtn">
+            <FontAwesomeIcon icon={faTemperatureLow} />
+          </div>
+      </Link>
+      <Link to={`/chart/press/${city}`}>
+          <div className="compressChartBtn">
+            <FontAwesomeIcon icon={faCompress} />
+          </div>
+      </Link>
       <Link to="/" >
-        <div className="backBtnChart">
+        <div className="backChartBtnInWind">
           <FontAwesomeIcon icon={faChevronCircleLeft} />
         </div>
       </Link>
@@ -71,4 +81,4 @@ function FiveDeysWeather () {
   );
 }
 
-export default FiveDeysWeather;
+export default FiveDaysWind;

@@ -5,7 +5,9 @@ import {
 import Form from './Components/Form/Form';
 import './App.css';
 import CurrentWeather from './Components/CurrentWeather/CurrentWeather';
-import FiveDeysWeather from './Components/FiveDeysWeather/FiveDeysWeather';
+import FiveDaysTemperature from './Components/FiveDaysTemperature/FiveDaysTemperature';
+import FiveDaysWind from './Components/FiveDaysWind/FiveDaysWind';
+import FiveDaysPressure from './Components/FiveDaysPressure/FiveDaysPressure';
 import NotFound from './Components/NotFound/NotFound'
 
 const App = () => {
@@ -19,8 +21,14 @@ const App = () => {
             <Route path="/weather/:city">
               <CurrentWeather />
             </Route>
-            <Route path="/chart/:city">
-              <FiveDeysWeather />
+            <Route path="/chart/temp/:city">
+              <FiveDaysTemperature />
+            </Route>
+            <Route path="/chart/wind/:city">
+              <FiveDaysWind />
+            </Route>
+            <Route path="/chart/press/:city">
+              <FiveDaysPressure />
             </Route>
             <Route component={NotFound} />
           </Switch>

@@ -57,9 +57,9 @@ p {
   width:  400px;
   height: 360px;
   background-color: rgba(255, 255, 255, .93);
-  border: .2px solid #818181;
+  border: .2px solid #9E7394;
   border-radius: 20px;
-  box-shadow: 0px 0px 50px -20px #818181;
+  box-shadow: 0px 0px 50px -20px #9E7394;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -70,18 +70,18 @@ p {
   font-family: monospace;
 }
 
-.high {
-  color: #F7995C;
+.currSunTime {
+  color: #F39402;
 }
 
-.medium {
+.currWind {
   color: #487598;
 }
 
-.low {
+.currPressure {
   color: #7DBDB5;
 }
 
-.textColor {
-  color: #9E7394;
+.currTemperature {
+  color: #e46c6d;
 }

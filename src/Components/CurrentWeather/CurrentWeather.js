@@ -51,52 +51,34 @@ const CurrentWeather = () => {
     const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString();
     const sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
 
-    const tempLevel = () => {
-      if (temp > 25) return 'high';
-      else if (temp < 15) return 'low';
-      else return 'medium';
-    }
-
-    const windSpeed = () => {
-      if (wind > 30) return 'high';
-      else if (wind < 10) return 'low';
-      else return 'medium';
-    }
-
-    const pressureLevel = () => {
-      if (pressure > 1020) return 'high';
-      else if (pressure < 1000) return 'low';
-      else return 'medium';
-    }
-
     content = (
       <table>
         <tbody>
-          <tr className={`${tempLevel()}`}>
+          <tr className={`currTemperature`}>
             <td className="title">
               <FontAwesomeIcon icon={faTemperatureLow} />
             </td>
             <td className="value">{temp} &#176;C</td>
           </tr>
-          <tr className={`${windSpeed()}`}>
+          <tr className={`currWind`}>
             <td className="title">
               <FontAwesomeIcon icon={faWind} />
             </td>
             <td className="value">{wind} m/s</td>
           </tr>
-          <tr className={`${pressureLevel()}`}>
+          <tr className={`currPressure`}>
             <td className="title">
               <FontAwesomeIcon icon={faCompress} />
             </td>
             <td className="value">{pressure} hPa</td>
           </tr>
-          <tr className="medium">
+          <tr className="currSunTime">
             <td className="title">
               <FontAwesomeIcon icon={faSun} /> <FontAwesomeIcon icon={faAngleDoubleUp} />
             </td>
             <td className="value">{sunriseTime}</td>
           </tr>
-          <tr className="medium">
+          <tr className="currSunTime">
             <td className="title">
               <FontAwesomeIcon icon={faSun} /> <FontAwesomeIcon icon={faAngleDoubleDown} />
             </td>
@@ -109,7 +91,7 @@ const CurrentWeather = () => {
 
     return (
       <div className="result">
-        <Link to={`/chart/${city}`}>
+        <Link to={`/chart/temp/${city}`}>
           <div className="chartBtn">
             <FontAwesomeIcon icon={faChartBar} />
           </div>

@@ -1,0 +1,57 @@
+.chartInWind {
+  width:  900px;
+  height: 290px;
+  padding: 35px;
+  background-color: rgba(255, 255, 255, .9);
+  border: .2px solid #487598;
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px -20px #487598;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.backChartBtnInWind {
+  position: absolute;
+  top:   20px;
+  right: 15px;
+  font-size: 24px;
+  color: #487598;
+}
+
+.backChartBtnInWind:hover {
+  color: #F39402;
+  top:   19px;
+}
+
+.tempChartBtn{
+  position: absolute;
+  top:   20px;
+  right: 110px;
+  font-size: 24px;
+  color: #487598;
+}
+
+.tempChartBtn:hover {
+  color: #F39402;
+  top:   19px;
+}
+
+.compressChartBtn{
+  position: absolute;
+  top:   20px;
+  right: 65px;
+  font-size: 24px;
+  color: #487598;
+}
+
+.compressChartBtn:hover {
+  color: #F39402;
+  top:   19px;
+}
