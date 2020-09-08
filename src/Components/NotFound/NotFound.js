@@ -9,10 +9,8 @@ function NotFound( {location: { pathname } = "HH" } ) {
 
   useEffect(() => {
     const intervalId = setInterval(countdown, 1250);
-    return () => {
-      clearInterval(intervalId);
-    }
-  }, [counter]);
+    return () => clearInterval(intervalId);
+  });
 
   return (
     <section>

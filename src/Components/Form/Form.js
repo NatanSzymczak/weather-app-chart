@@ -14,7 +14,7 @@ const Form = () => {
   useEffect( () => {
     (inputValue.length > 2 ) &&
       setSearchList(cityNameList.filter(
-        curr => curr.indexOf(inputValue.toLowerCase()) == 0
+        curr => curr.indexOf(inputValue.toLowerCase()) === 0
       ));
   },[inputValue])
 
@@ -30,7 +30,7 @@ const Form = () => {
         onKeyDown={ e => handleKeyDown(e)}
         spellCheck="false"
       />
-      { Boolean(inputValue.length > 2) && <ShowList searchList={searchList} /> }
+      { Boolean(inputValue.length > 2) && <ShowList key="searchList" searchList={searchList} /> }
       <Link to={`/weather/${inputValue}`}>
         <button className="checkWeather">check</button>
       </Link>

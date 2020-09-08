@@ -44,6 +44,11 @@ const CurrentWeather = () => {
 
   }, [city]);
 
+  const firstUpper = cityName => cityName.split(' ')
+    .map((e,i) => e.split('')
+      .map((e,i) => i===0 ? e.toUpperCase() : e ).join('')
+    ).join(' ');
+
   let content = 'null';
 
   if(!err && city) {
@@ -101,7 +106,7 @@ const CurrentWeather = () => {
             <FontAwesomeIcon icon={faChevronCircleLeft} />
           </div>
         </Link>
-        <p className="cityAndCountry">{city} [{country}]</p>
+        <p className="cityAndCountry">{ firstUpper(city) } [{country}]</p>
         <p className="time">{ new Date(date*1000).toLocaleTimeString() }</p>
         { err ? <Redirect to={`/${city}`} /> : content }
       </div>
