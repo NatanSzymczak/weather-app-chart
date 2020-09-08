@@ -7,8 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleLeft, faTemperatureLow, faCompress } from "@fortawesome/free-solid-svg-icons/";
 import './FiveDaysWind.css';
 
-
-
 function FiveDaysWind () {
   const { city } = useParams();
   const [ history, setHistory] = useState([]);
@@ -27,7 +25,6 @@ function FiveDaysWind () {
       console.log(err);
     });
   }, [city]);
-
 
   const title = (e) => {
     const getHour = () => +`${(() => +e.dt_txt[11] ? e.dt_txt[11] : '')()}${e.dt_txt[12]}`

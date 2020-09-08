@@ -8,7 +8,6 @@ import { faChevronCircleLeft, faWind, faTemperatureLow } from "@fortawesome/free
 import './FiveDaysPressure.css';
 
 
-
 function FiveDaysPressure () {
   const { city } = useParams();
   const [ history, setHistory] = useState([]);
@@ -28,7 +27,6 @@ function FiveDaysPressure () {
     });
   }, [city]);
 
-
   const title = (e) => {
     const getHour = () => +`${(() => +e.dt_txt[11] ? e.dt_txt[11] : '')()}${e.dt_txt[12]}`
     const getDay = () => {
@@ -42,7 +40,6 @@ function FiveDaysPressure () {
     }
     return getDay();
   }
-
 
   const obiekt = {
     labels: history.map((elem, id) => title(elem, id) ),

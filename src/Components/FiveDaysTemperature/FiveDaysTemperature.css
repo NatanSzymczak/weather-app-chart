@@ -17,6 +17,19 @@
   font-family: monospace;
 }
 
+.backChartBtnInTemp:hover:after,
+.windChartBtnInTemp:hover:after,
+.compressChartBtnInTemp:hover:after {
+  display: block;
+  position: absolute;
+  background-color: #9E7394;
+  padding: 4px 7px;
+  font-size: 16px;
+  color: #FFF;
+  border-radius: 7px;
+  border: 3px solid #FFF;
+}
+
 .backChartBtnInTemp {
   position: absolute;
   top:   20px;
@@ -28,6 +41,13 @@
 .backChartBtnInTemp:hover {
   color: #F39402;
   top:   19px;
+}
+
+.backChartBtnInTemp:hover:after {
+  content: 'Back';
+  top: 40px;
+  right: -15px;
+  background-color: #e46c6d;
 }
 
 .windChartBtnInTemp{
@@ -43,6 +63,13 @@
   top:   19px;
 }
 
+.windChartBtnInTemp:hover:after {
+  content: 'Wind';
+  top: 40px;
+  right: -15px;
+  background-color: #e46c6d;
+}
+
 .compressChartBtnInTemp{
   position: absolute;
   top:   20px;
@@ -54,4 +81,11 @@
 .compressChartBtnInTemp:hover {
   color: #F39402;
   top:   19px;
+}
+
+.compressChartBtnInTemp:hover:after {
+  content: 'Pressure';
+  top: 40px;
+  right: -34px;
+  background-color: #e46c6d;
 }

@@ -7,8 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleLeft, faWind, faCompress } from "@fortawesome/free-solid-svg-icons/";
 import './FiveDaysTemperature.css';
 
-
-
 function FiveDaysTemperature () {
   const { city } = useParams();
   const [ history, setHistory] = useState([]);
@@ -28,7 +26,6 @@ function FiveDaysTemperature () {
     });
   }, [city]);
 
-
   const title = (e) => {
     const getHour = () => +`${(() => +e.dt_txt[11] ? e.dt_txt[11] : '')()}${e.dt_txt[12]}`
     const getDay = () => {
@@ -42,7 +39,6 @@ function FiveDaysTemperature () {
     }
     return getDay();
   }
-
 
   const obiekt = {
     labels: history.map((elem, id) => title(elem, id) ),

@@ -40,8 +40,6 @@ const CurrentWeather = () => {
       console.log(err);
       setErr(true);
     });
-
-
   }, [city]);
 
   const firstUpper = cityName => cityName.split(' ')
@@ -99,6 +97,7 @@ const CurrentWeather = () => {
         <Link to={`/chart/temp/${city}`}>
           <div className="chartBtn">
             <FontAwesomeIcon icon={faChartBar} />
+            {/* <div className='desc'>Description</div> */}
           </div>
         </Link>
         <Link to="/" >

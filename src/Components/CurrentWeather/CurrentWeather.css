@@ -46,6 +46,7 @@ p {
   top:   150px;
   right: 15px;
   font-size: 24px;
+
 }
 
 .backBtn:hover {
@@ -84,4 +85,40 @@ p {
 
 .currTemperature {
   color: #e46c6d;
+}
+
+.desc{
+  background-color: #9E7394;
+  position: absolute;
+  color: white;
+  padding: 7px;
+  font-size: 16px;
+  border: 2px solid #FFF;
+  border-radius: 5px;
+  top: -20px;
+  left: 60px;
+}
+
+.chartBtn:hover:after,
+.backBtn:hover:after {
+  display: block;
+  position: absolute;
+  background-color: #9E7394;
+  padding: 4px 7px;
+  font-size: 16px;
+  color: #FFF;
+  border-radius: 7px;
+  border: 3px solid #FFF;
+}
+
+.chartBtn:hover:after {
+  content: 'Charts';
+  top: -26px;
+  left: 55px;
+}
+
+.backBtn:hover:after {
+  content: 'Back';
+  top: 14px;
+  left: 55px;
 }

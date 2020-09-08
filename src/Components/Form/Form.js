@@ -18,9 +18,6 @@ const Form = () => {
       ));
   },[inputValue])
 
-
-  console.log(searchList);
-
   return (
     <div className="cityNameForm">
       <input

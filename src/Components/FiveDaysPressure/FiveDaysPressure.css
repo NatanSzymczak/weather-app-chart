@@ -17,6 +17,19 @@
   font-family: monospace;
 }
 
+.backChartBtnInPress:hover:after,
+.windChartBtnInPress:hover:after,
+.tempChartBtnInPress:hover:after {
+  display: block;
+  position: absolute;
+  background-color: #9E7394;
+  padding: 4px 7px;
+  font-size: 16px;
+  color: #FFF;
+  border-radius: 7px;
+  border: 3px solid #FFF;
+}
+
 .backChartBtnInPress {
   position: absolute;
   top:   20px;
@@ -28,6 +41,13 @@
 .backChartBtnInPress:hover {
   color: #F39402;
   top:   19px;
+}
+
+.backChartBtnInPress:hover:after {
+  content: 'Back';
+  top: 40px;
+  right: -15px;
+  background-color: #7DBDB5;
 }
 
 .windChartBtnInPress{
@@ -43,6 +63,13 @@
   top:   19px;
 }
 
+.windChartBtnInPress:hover:after {
+  content: 'Wind';
+  top: 40px;
+  right: -15px;
+  background-color: #7DBDB5;
+}
+
 .tempChartBtnInPress{
   position: absolute;
   top:   20px;
@@ -54,4 +81,11 @@
 .tempChartBtnInPress:hover {
   color: #F39402;
   top:   19px;
+}
+
+.tempChartBtnInPress:hover:after {
+  content: 'Temperature';
+  top: 40px;
+  right: -41px;
+  background-color: #7DBDB5;
 }

@@ -17,6 +17,19 @@
   font-family: monospace;
 }
 
+.backChartBtnInWind:hover:after,
+.tempChartBtn:hover:after,
+.compressChartBtn:hover:after {
+  display: block;
+  position: absolute;
+  background-color: #9E7394;
+  padding: 4px 7px;
+  font-size: 16px;
+  color: #FFF;
+  border-radius: 7px;
+  border: 3px solid #FFF;
+}
+
 .backChartBtnInWind {
   position: absolute;
   top:   20px;
@@ -28,6 +41,13 @@
 .backChartBtnInWind:hover {
   color: #F39402;
   top:   19px;
+}
+
+.backChartBtnInWind:hover:after {
+  content: 'Back';
+  top: 40px;
+  right: -15px;
+  background-color: #487598;
 }
 
 .tempChartBtn{
@@ -43,6 +63,13 @@
   top:   19px;
 }
 
+.tempChartBtn:hover:after {
+  content: 'Temperature';
+  top: 40px;
+  right: -40px;
+  background-color: #487598;
+}
+
 .compressChartBtn{
   position: absolute;
   top:   20px;
@@ -54,4 +81,11 @@
 .compressChartBtn:hover {
   color: #F39402;
   top:   19px;
+}
+
+.compressChartBtn:hover:after {
+  content: 'Pressure';
+  top: 40px;
+  right: -34px;
+  background-color: #487598;
 }
