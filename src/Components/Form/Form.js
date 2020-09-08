@@ -19,20 +19,25 @@ const Form = () => {
   },[inputValue])
 
   return (
-    <div className="cityNameForm">
-      <input
-        type="text"
-        onChange={e => setInputValue(e.target.value)}
-        placeholder="Check weather:"
-        onKeyDown={ e => handleKeyDown(e)}
-        spellCheck="false"
-      />
-      { Boolean(inputValue.length > 2) && <ShowList key="searchList" searchList={searchList} /> }
-      <Link to={`/weather/${inputValue}`}>
-        <button className="checkWeather">check</button>
-      </Link>
-      {enter && <Redirect to={`/weather/${inputValue}`} />}
-    </div>
+    <>
+      <div className="push">
+      With us you will be prepared for any weather !
+      </div>
+      <div className="cityNameForm">
+        <input
+          type="text"
+          onChange={e => setInputValue(e.target.value)}
+          placeholder="Check weather:"
+          onKeyDown={ e => handleKeyDown(e)}
+          spellCheck="false"
+        />
+        { Boolean(inputValue.length > 2) && <ShowList key="searchList" searchList={searchList} /> }
+        <Link to={`/weather/${inputValue}`}>
+          <button className="checkWeather">check</button>
+        </Link>
+        {enter && <Redirect to={`/weather/${inputValue}`} />}
+      </div>
+    </>
   )
 }
 
