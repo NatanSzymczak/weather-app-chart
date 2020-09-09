@@ -1,8 +1,3 @@
-*::selection {
-  background: rgba(228, 108, 109, .1);
-  cursor: url(./cursor.cur), auto;
-}
-
 body {
   height: 100vh;
   background-image: url("https://www.saga.co.uk/contentlibrary/saga/publishing/verticals/technology/apps/shutterstock_240459751.jpg");
